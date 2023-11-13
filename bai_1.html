@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function checkNumber(a) {
+        let array = a.split("").map((item) => parseInt(item));
+        let max = array[0];
+        for (let number of array) {
+          if (number > max) {
+            Max = number;
+          }
+          if (
+            number !== max &&
+            array.filter((n) => n === number).length === 1
+          ) {
+            max = number;
+            break;
+          }
+        }
+        return max;
+      }
+      let numbers = prompt("nhập ký tự");
+      let MaxNumber = checkNumber(numbers);
+      console.log(MaxNumber);
+    </script>
+  </body>
+</html>

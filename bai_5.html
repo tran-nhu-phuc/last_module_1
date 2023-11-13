@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function string() {
+        let input = "This is a number";
+        let arr = input.split(" ");
+        console.log(arr);
+        let outPut = "";
+        arr.forEach((item) => {
+          let a = item.split("");
+          a.reverse();
+          let b = a.join("");
+          console.log(b);
+          outPut += b + " ";
+        });
+        console.log(outPut);
+      }
+      string();
+    </script>
+  </body>
+</html>
